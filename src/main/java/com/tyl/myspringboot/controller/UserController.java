@@ -23,6 +23,7 @@ public class UserController {
     @GetMapping("/id")
     public User getUser(@RequestParam("id") Integer id) {
         User user = userMapper.selectByPrimaryKey(id);
+        user.setUserName("唐唐");
         System.out.println(user);
         return user;
     }
