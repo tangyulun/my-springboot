@@ -23,7 +23,7 @@ public class UserController {
     @GetMapping("/id")
     public User getUser(@RequestParam("id") Integer id) {
         User user = userMapper.selectByPrimaryKey(id);
-        user.setUserName("唐唐");
+        //user.setUserName("唐唐");
         System.out.println(user);
         return user;
     }
@@ -37,5 +37,6 @@ public class UserController {
     public int delUser(@RequestParam("id") Integer id) {
         return userMapper.deleteByPrimaryKey(id);
     }
+
 
 }
